@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <title>Tırkelu</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="reg.css" />
     <link rel="icon" href="images/main_pictures/favicon-logo.ico" type="image/x-icon">
     <link
@@ -51,13 +52,13 @@
           </div>
       </nav>
       </header>
-      <div id="fone-photo">
-        <div class="content" style="margin-bottom: 200px;">
-          <div class="signup-box">
-            <h1>Tırkelu</h1>
-            <h4>Būl tegın jäne bır minutty alady</h4>
-            <form>
-              <label>Sizdiń atyńyz</label>
+      </div>
+      <div class="bg-img">
+        <form action="/action_page.php" class="container" style="width: 400px;">
+          <h1 style="margin-right: 25px;">Tırkelu</h1>
+          <p style="text-align: center; font-weight: 600; margin-right: 25px;">Būl tegın jäne bır minutty alady</p>
+          <center>
+          <label>Sizdiń atyńyz</label>
               <input type="text" placeholder="" />
               <label>Sizdiń famılıańyz</label>
               <input type="text" placeholder="" />
@@ -67,14 +68,17 @@
               <input type="password" placeholder="" />
               <label>Qupıa sózdi rastaý</label>
               <input type="password" placeholder="" />
-              <input type="button" value="Tırkelu" style="width: 300px;cursor: pointer;"/>
-            <closeform></closeform></form>
+            <p></p>
+          
+              <button type="button" class="btn" style="width: 200px;cursor: pointer; font-size: larger;" onclick="showSuccessAlert()">Tirkelu</button>
+              <p></p>
             <p class="para-2">
               <span style="color: black; margin-left: 60px;">Accountińiz bar ma?</span> <a href="login.html">Kirý</a>
             </p>
-          </div>
-     </div>
+          </center>
+        </form>
       </div>
+
       <footer class="container-fluid">
     
         <div class="row">
@@ -108,6 +112,18 @@
   </footer>
  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script>
+  function showSuccessAlert() {
+    var successAlert = document.createElement('div');
+    successAlert.classList.add('success-alert');
+    successAlert.innerHTML = 'Quttyqtaımyz, siz saıtqa sátti tirkeldińiz.';
+    document.body.appendChild(successAlert);
+  
+    setTimeout(function() {
+      successAlert.remove();
+    }, 2000);
+  }
+  </script>
 </body>
 </html>
 </div>
