@@ -87,12 +87,13 @@
 </div>
 
 </footer>
+
   
 <script>
   var object1 = {
     name: "Madiyar",
     description: "Negizgi bettegi Mýzyka jáne jobadaǵy keıbir múmkindikter",
-    picpath: "images/about_us_pictures/1card.jpg"
+    picpath: "images/about_us_pictures/madiyar.jpg"
   };
 
   var object2 = {
@@ -113,26 +114,24 @@
     description: "Bizdiń jobanyń dızaıny jáne keıbir erekshelikteri",
     picpath: "images/about_us_pictures/Ykylas.jpg"
   };
-
   function makeCards() {
     var cardContainer = document.getElementById("cardContainer");
-
-
     var cards = [object1, object2, object3, object4];
     cards.forEach(function(object) {
       var card = document.createElement("div");
-      card.className = "card";
-      card.textContent = object.name;
-      card.addEventListener("click", function() {
-        if (card.textContent === object.name) {
-          card.textContent = object.description;
-        } else {
-          card.textContent = object.name;
-        }
-      });
-
-      cardContainer.appendChild(card);
-    });
+      card.innerHTML = ` <div class="flip-box card">
+    <div class="flip-box-inner">
+      <div class="flip-box-front">
+        <img src="${object.picpath}">
+        <h2>${object.name}</h2>
+      </div>
+      <div class="flip-box-back">
+        <h2>${object .description}</h2>
+      </div>
+    </div>
+  </div>`
+  cardContainer.appendChild(card);
+});
   }
 
 

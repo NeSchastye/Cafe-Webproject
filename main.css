@@ -155,19 +155,6 @@ body{
   color: #666;
   font-weight: 600;
 }
-
-
-
-.about-img.animate {
-  transform: translateX(0);
- 
-}
-
-.about-text.animate {
-  transform: translateX(0);
-}
-
-
 .about-img {
   padding: 30px;
   overflow: hidden;
